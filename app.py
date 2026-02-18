@@ -42,6 +42,16 @@ st.markdown("""
 st.sidebar.title("🤖 AI Code Fixer")
 st.sidebar.markdown("---")
 
+# Initialize session state
+if "code" not in st.session_state:
+    st.session_state.code = ""
+if "analysis" not in st.session_state:
+    st.session_state.analysis = None
+if "fixed_code" not in st.session_state:
+    st.session_state.fixed_code = None
+if "language" not in st.session_state:
+    st.session_state.language = "Python"
+
 # Language selector
 language = st.sidebar.selectbox(
     "Language",
@@ -53,7 +63,7 @@ language = st.sidebar.selectbox(
 st.sidebar.markdown("### 🔑 API Configuration")
 api_base = st.sidebar.text_input(
     "API Base URL",
-    value=os.getenv("API_BASE", "https://api.minimax.io/anthropic")
+    value=os.getenv("API_BASE", "https://api.minimax.io")
 )
 api_key = st.sidebar.text_input(
     "API Key",
