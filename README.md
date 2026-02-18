@@ -113,3 +113,34 @@ These agents can now autonomously:
 ## License
 
 MIT License - Feel free to use and modify!
+
+---
+
+## 🌐 Web UI (NEW!)
+
+A Streamlit web interface is now available!
+
+### Quick Start
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the web app
+streamlit run app.py
+```
+
+The app will open at `http://localhost:8501`
+
+### Features
+
+- 📁 Upload .py and .js files
+- ✏️ Paste code directly  
+- 🔍 Analyze code for bugs
+- ✨ One-click "Quick Fix"
+- 📊 Beautiful results display
+- 🔑 Configurable API (MiniMax, OpenAI, Anthropic)
+
+### Demo Files
+
+Load sample buggy files directly from the sidebar!
